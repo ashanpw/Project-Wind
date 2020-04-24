@@ -1,3 +1,10 @@
+.App {
+  background-color: #ffffff;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  visibility: hidden;
+}
+
 .loadingScreen {
   position: fixed;
   top: 50%;

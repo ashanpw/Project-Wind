@@ -2,7 +2,8 @@ import React, { useEffect, useRef } from "react";
 import "../styles/App_styles.css";
 import gsap from "gsap";
 const App = () => {
-  let wind,
+  let app,
+    wind,
     rect,
     video,
     rect1,
@@ -25,7 +26,7 @@ const App = () => {
     projects,
     experience,
     contact;
-  wind = rect = video = rect1 = rect2 = rect3 = rect4 = rect5 = rect6 = rect7 = rect8 = rect9 = loaded = projectWind = titleBlock = line = numberNextToCenterLine = centerName = rightNumbers = about = projects = experience = contact = useRef(
+  app = wind = rect = video = rect1 = rect2 = rect3 = rect4 = rect5 = rect6 = rect7 = rect8 = rect9 = loaded = projectWind = titleBlock = line = numberNextToCenterLine = centerName = rightNumbers = about = projects = experience = contact = useRef(
     null
   );
   let playVideo = function () {
@@ -36,11 +37,12 @@ const App = () => {
     video.play();
   };
   let invertColor = function () {
-    video.currentTime = 17.5;
+    video.currentTime = 19;
     video.style.filter = "invert(.8) contrast(140%) hue-rotate(40deg)";
   };
 
   useEffect(() => {
+    gsap.to(app, 0, { css: { visibility: "visible" } });
     let tl = gsap.timeline();
     tl.from(wind, 2.5, { opacity: 0, ease: "power4.inOut" });
     let i;
@@ -71,12 +73,12 @@ const App = () => {
         x: "100",
         opacity: 0,
         ease: "power1.inOut",
-        delay: 3.4,
+        delay: 3.5,
       });
 
     let tl_fadeout_resize = gsap
       .timeline()
-      .to(video, 3, { opacity: "0", delay: 13.18 })
+      .to(video, 3, { opacity: "0", delay: 13.1 })
       .to(video, 0, {
         width: "32vw",
         height: "80vh",
@@ -110,7 +112,7 @@ const App = () => {
     });
   }, []);
   return (
-    <div>
+    <div className="App" ref={(el) => (app = el)}>
       <div className="screen">
         <video controls loop muted className="video" ref={(el) => (video = el)}>
           <source src="wind.mp4" type="video/mp4" />
@@ -230,7 +232,7 @@ const App = () => {
         </h4>
       </div>
       <h1 className="centerName" ref={(el) => (centerName = el)}>
-        Website Portfolio <br />
+        Software Engineer <br />
         2020
       </h1>
       <h1 className="rightNumbers" ref={(el) => (rightNumbers = el)}>

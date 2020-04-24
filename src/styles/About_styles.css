@@ -1,0 +1,92 @@
+.about {
+  background-color: rgb(43, 43, 43);
+  color: rgb(211, 175, 175);
+  padding-top: 1vh;
+}
+.backToMain {
+  position: absolute;
+  top: 7.5vh;
+  left: 27.5vw;
+  z-index: 110;
+}
+.centerBody {
+  background-color: rgb(12, 12, 12);
+  width: 60vw;
+  height: 99vh;
+  margin: auto;
+  z-index: 1;
+}
+
+.centerImage {
+  position: absolute;
+  object-fit: cover;
+  top: 20vh;
+  left: 27.5vw;
+  width: 45vw;
+  height: 55vh;
+}
+.sideText {
+  opacity: 0.21;
+  position: absolute;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  left: 23.5vw;
+  top: 75vh;
+  z-index: 110;
+}
+.name {
+  position: absolute;
+  font-size: 4.5vh;
+  top: 82.5vh;
+  left: 27.5vw;
+  z-index: 110;
+}
+.titleSubDesc {
+  position: absolute;
+  font-size: 1.2vh;
+  top: 90vh;
+  left: 27.5vw;
+  z-index: 110;
+}
+
+.windDesc {
+  opacity: 0.21;
+  position: absolute;
+  font-size: 0.65vw;
+  max-width: 12.5vw;
+  top: 85vh;
+  left: 60vw;
+  z-index: 110;
+}
+
+.bottomLine {
+  position: absolute;
+  top: 96vh;
+  left: 27.5vw;
+  width: 10vw;
+  height: 2vh;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 2;
+  z-index: 100;
+}
+
+/* White Page */
+.whitePage {
+  position: absolute;
+  top: 100vh;
+  z-index: 100;
+  color: black;
+
+  background-color: rgb(255, 255, 255);
+
+  width: 60vw;
+  height: 100vh;
+}
+
+.closeUp {
+  position: absolute;
+  top: 40vh;
+  left: 7.5vw;
+  width: 20vwh;
+  height: 20vh;
+}
