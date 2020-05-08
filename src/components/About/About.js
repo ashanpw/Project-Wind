@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 import './About.css';
 import face from '../../assets/face.jpg';
 import codeIcon from '../../assets/code.png';
@@ -8,9 +9,42 @@ import cloudIcon from '../../assets/cloud.png';
 import gorillaImage from '../../assets/gorilla.jpg';
 
 const About = (props) => {
+    useEffect(() => {
+        // Intro
+        gsap.from(".centerImage", 1.2, { width: 0, ease: "power1.inOut" })
+        gsap.from([".nameAbout", ".windDesc", ".sideText", ".backToMain", ".jobTitleSWE"], 1, { opacity: 0 })
+        gsap.from(".bottomLine", 1.5, { width: "0vw", delay: 0.5 })
+        // Second part
+        gsap.to([".flexContainerBody"], 1.7, { y: "-100vh", delay: 2.8, ease: "power1.inOut" })
+        gsap.to(".bottomLine", 1, { opacity: 0, delay: 3 })
+        gsap.to(".centerLine", 1, { opacity: 0, delay: 3.5 })
+
+        gsap.to([".nameAbout", ".jobTitleSWE", ".windDesc"], 1.7, {
+            color: "black",
+            y: "-62.5vh",
+            delay: 2.8,
+            ease: "power1.inOut",
+        });
+        gsap.to(".About", 1.5, { backgroundColor: "rgb(238, 238, 238)", delay: 3.5 })
+        gsap.to([".skillsFlexContainer", ".descUnderPfp"], 1, { color: "black", delay: 4, ease: "power1.in" })
+        gsap.to(".backToMain", 1, { color: "black", delay: 4 })
+        gsap.to([".flexContainerBody", ".rightColumnText"], 1, { color: "black", delay: 4.2, ease: "power1.in" })
+        gsap.to(".skillIcons", 1, { opacity: 1, delay: 4, ease: "power1.in" })
+        gsap.to(".windDesc", 1, { opacity: .8, delay: 3.2, ease: "power1.in" })
+
+    }, [])
+
+    const returnHomeHandler = () => {
+        gsap.to([".About", ".flexContainerBody"], 1, { backgroundColor: "black" })
+        gsap.to(["img", ".sideText"], 1, { opacity: "0" })
+        props.changePage("Home")
+    }
     return (
         <div className="About">
-            <h5 className="backToMain" style={{ color: "white" }}>Back to Main</h5>
+            <h5 className="backToMain" onClick={returnHomeHandler}>Back to Main</h5>
+            <svg className="bottomLine">
+                <line x1="0" y1="0" x2="100%" y2="0" />
+            </svg>
             {/* Full screen div -> */}
             <div className="topDiv">
                 <img src={gorillaImage} className="centerImage" />
@@ -39,11 +73,12 @@ const About = (props) => {
                         Humans have enabled computers to see and understand our world. However, this is just the beginning.
                         I aim to advance what we can see through computers and machine learning to bring forth a dominant and better future.
                     </p>
+                    <p className="skillsTitle">Skills</p>
                     <div className="skillsFlexContainer">
                         <div>
                             <img src={pointerIcon} className="skillIcons" />
-                            <p> React</p>
-                            <p>Node.js</p>
+                            <p> ReactJS</p>
+                            <p>NodeJS</p>
                             <p>Flask</p>
                         </div>
                         <div>

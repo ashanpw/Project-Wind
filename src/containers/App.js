@@ -15,7 +15,7 @@ class App extends Component {
   }
   render() {
     // let display = this.state.page === "PreHome" ? <PreHome changePage={this.updatePageHandler} /> : this.state.page === "Home" ? <Home changePage={this.updatePageHandler} /> : this.state.page === "About" ? <About changePage={this.updatePageHandler} /> : <Projects changePage={this.updatePageHandler} />
-    let display = <About />
+    let display = <Home changePage={this.updatePageHandler} />
     return (
       <div className="App">
         {display}

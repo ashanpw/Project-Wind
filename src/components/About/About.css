@@ -1,6 +1,6 @@
 .About {
   font-family: "Raleway", sans-serif;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(24, 24, 24);
   color: white;
   z-index: -1;
   min-height: 100vh;
@@ -9,7 +9,7 @@
 .backToMain {
   position: absolute;
   top: 7.5vh;
-  left: 27.5vw;
+  left: 26.25vw;
   z-index: 110;
 }
 
@@ -22,6 +22,7 @@
   top: 75vh;
   z-index: 110;
 }
+
 .centerImage {
   position: absolute;
   object-fit: cover;
@@ -33,7 +34,6 @@
 .topDiv {
   height: 100vh;
   background-color: black;
-  max-width: 60vw;
   margin: auto;
 }
 
@@ -53,6 +53,9 @@
 }
 /* Everything for second part of page except flexContainerHeader */
 @media (min-width: 1000px) {
+  .topDiv {
+    max-width: 60vw;
+  }
   .flexItemLeft {
     width: 20vw;
   }
@@ -74,8 +77,8 @@
   .flexContainerBody {
     display: flex;
     width: 60vw;
+    min-height: 80vh;
     margin: auto;
-    padding-top: 10vh;
     justify-content: space-evenly;
     align-items: flex-start;
   }
@@ -86,10 +89,33 @@
 }
 
 @media (max-width: 999px) {
+  .windDesc {
+    visibility: hidden;
+  }
   .flexContainerHeader,
   .flexContainerBody {
     padding: 10%;
   }
+  .backToMain {
+    left: 2vw;
+  }
+  .flexContainerHeader {
+    padding-top: 0;
+  }
+  .face {
+    padding-top: 20vh;
+  }
+}
+
+.bottomLine {
+  position: absolute;
+  top: 96vh;
+  left: 26vw;
+  width: 10vw;
+  height: 2vh;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 2;
+  z-index: 100;
 }
 
 .nameAbout {
@@ -112,6 +138,7 @@
 }
 
 .flexContainerBody {
+  padding-top: 37.5vh;
   padding-bottom: 10%;
 }
 
@@ -133,7 +160,6 @@ p {
 
 .skillsFlexContainer {
   display: flex;
-  padding-top: 10%;
   width: 100%;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -141,10 +167,17 @@ p {
 }
 
 .skillIcons {
+  opacity: 0;
   width: 3vh;
   height: 3vh;
 }
 
 .descUnderPfp {
   margin-top: 7vh;
+}
+
+.skillsTitle {
+  padding-top: 10%;
+  text-align: center;
+  margin-bottom: 5%;
 }
