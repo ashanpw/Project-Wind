@@ -1,0 +1,150 @@
+.About {
+  font-family: "Raleway", sans-serif;
+  background-color: rgb(238, 238, 238);
+  color: white;
+  z-index: -1;
+  min-height: 100vh;
+}
+
+.backToMain {
+  position: absolute;
+  top: 7.5vh;
+  left: 27.5vw;
+  z-index: 110;
+}
+
+.sideText {
+  opacity: 0.21;
+  position: absolute;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  left: 23.5vw;
+  top: 75vh;
+  z-index: 110;
+}
+.centerImage {
+  position: absolute;
+  object-fit: cover;
+  top: 20vh;
+  left: 27.5vw;
+  width: 45vw;
+  height: 55vh;
+}
+.topDiv {
+  height: 100vh;
+  background-color: black;
+  max-width: 60vw;
+  margin: auto;
+}
+
+.flexContainerHeader {
+  font-size: 1rem;
+  z-index: 10;
+  margin-top: 0;
+}
+.flexContainerHeader {
+  position: absolute;
+  top: 82.5vh;
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60vw;
+}
+/* Everything for second part of page except flexContainerHeader */
+@media (min-width: 1000px) {
+  .flexItemLeft {
+    width: 20vw;
+  }
+  .flexItemRight {
+    width: 20vw;
+  }
+  .nameAbout {
+    font-size: 2.9rem;
+    width: 20vw;
+    margin: 0;
+  }
+  .windDesc {
+    width: 20vw;
+    z-index: 110;
+  }
+  .jobTitleSWE {
+    font-size: 1.2vh;
+  }
+  .flexContainerBody {
+    display: flex;
+    width: 60vw;
+    margin: auto;
+    padding-top: 10vh;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  .descUnderPfp {
+    max-width: 20vw;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 999px) {
+  .flexContainerHeader,
+  .flexContainerBody {
+    padding: 10%;
+  }
+}
+
+.nameAbout {
+  margin: 0;
+}
+.windDesc {
+  opacity: 0.21;
+  font-size: 0.7rem;
+  z-index: 110;
+}
+.jobTitleSWE {
+  margin-top: 0.5em;
+}
+
+.flexContainerBody {
+  font-size: 1rem;
+  z-index: 10;
+  background-color: white;
+  margin-top: 0;
+}
+
+.flexContainerBody {
+  padding-bottom: 10%;
+}
+
+.face {
+  width: 52%;
+  height: auto;
+}
+
+.rightColumnText {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+.rightColumnTextResumeInfo {
+  font-size: 0.9rem;
+}
+
+.skillsFlexContainer {
+  display: flex;
+  padding-top: 10%;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.skillIcons {
+  width: 3vh;
+  height: 3vh;
+}
+
+.descUnderPfp {
+  margin-top: 7vh;
+}

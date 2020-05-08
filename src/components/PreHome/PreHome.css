@@ -1,0 +1,53 @@
+.PreHome {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+.lineInstructions {
+  position: absolute;
+  left: 30vw;
+  top: 35vh;
+}
+.svgRect {
+  /* margin-right: 30vw; */
+}
+.sideLine {
+  stroke-width: 2;
+}
+
+.name {
+  position: absolute;
+  left: 60vw;
+  top: 20vh;
+}
+.instructions {
+  position: absolute;
+  left: 60vw;
+  bottom: 20vh;
+}
+
+.imageContainer {
+  position: absolute;
+  width: 15vh;
+  height: 15vh;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}
+
+.icon {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  filter: invert(1);
+}
+
+.projectWind {
+  visibility: hidden;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  transform: translate(-50%, -50%);
+}

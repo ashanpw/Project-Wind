@@ -1,0 +1,13 @@
+.Video {
+  /* width: 100vw;
+  height: 100vh; */
+}
+.bgVideo {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+}
