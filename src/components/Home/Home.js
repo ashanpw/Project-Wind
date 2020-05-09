@@ -59,7 +59,7 @@ const Home = (props) => {
             gsap.from([about, projects, experience, contact], 1, {
                 x: "-100px",
                 opacity: 0,
-                delay: 2.8,
+                delay: 2,
             });
         } else {
             let tl_play_vid = gsap.timeline();
@@ -98,7 +98,7 @@ const Home = (props) => {
 
     const changePageHandler = (pageName) => {
         overlayBlackMask.style.display = "";
-        gsap.to(overlayBlackMask, .5, { opacity: 1 })
+        gsap.to(overlayBlackMask, .4, { opacity: 1 })
             .eventCallback("onComplete", () => props.changePage(pageName))
 
     }

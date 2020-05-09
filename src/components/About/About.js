@@ -11,9 +11,9 @@ import gorillaImage from '../../assets/gorilla.jpg';
 const About = (props) => {
     useEffect(() => {
         // Intro
-        gsap.to(".centerImage", 1.2, { width: "45vw", ease: "power1.inOut", delay: .5 })
+        gsap.to(".centerImage", 1.2, { width: "47.5vw", ease: "power1.inOut", delay: .5 })
         gsap.to([".nameAbout", ".backToMain", ".jobTitleSWE"], 1, { opacity: 1, delay: .5 })
-        gsap.to([".windDesc", ".sideText"], 1, { opacity: .21, delay: .5 })
+        gsap.to([".windDesc", ".sideText"], 1, { opacity: .7, delay: .5 })
         gsap.to(".bottomLine", 1.5, { width: "10vw", delay: 1 })
 
         // Second part
@@ -27,18 +27,17 @@ const About = (props) => {
             delay: 3.3,
             ease: "power1.inOut",
         });
-        gsap.to(".About", 1.5, { backgroundColor: "rgb(238, 238, 238)", delay: 4 })
+        gsap.to(".About", 1.5, { backgroundColor: "rgb(238, 238, 238)", delay: 3.8 })
         gsap.to([".skillsFlexContainer", ".descUnderPfp"], 1, { color: "black", delay: 4.5, ease: "power1.in" })
         gsap.to(".backToMain", 1, { color: "black", delay: 4.5 })
-        gsap.to([".flexContainerBody", ".rightColumnText"], 1, { color: "black", delay: 4.7, ease: "power1.in" })
+        gsap.to([".flexContainerBody", ".rightColumnText"], 1, { color: "black", delay: 4.8, ease: "power1.in" })
         gsap.to(".skillIcons", 1, { opacity: 1, delay: 4.5, ease: "power1.in" })
-        gsap.to(".windDesc", 1, { opacity: .8, delay: 3.7, ease: "power1.in" })
+        gsap.to(".windDesc", 1, { opacity: .85, delay: 3.7, ease: "power1.in" })
 
     }, [])
 
     const returnHomeHandler = () => {
-        gsap.to([".About", ".flexContainerBody"], 1, { backgroundColor: "black" })
-        gsap.to(["img", ".sideText"], 1, { opacity: "0" }).eventCallback("onComplete", () => {
+        gsap.to([".About"], .4, { opacity: 0 }).eventCallback("onComplete", () => {
             props.changePage("HomeReturn")
         })
 
@@ -120,7 +119,7 @@ const About = (props) => {
                     <p className="rightColumnTextResumeInfo">Advanced in: Java, Python, JavaScript, HTML/CSS</p>
                     <p className="rightColumnTextResumeInfo">Proficient in: Ruby, OCaml, C, Matlab</p>
                     <br />
-                    <h2 className="hTagsPadded">Academics:</h2>
+                    <h2 className="hTagsPadded">Academics</h2>
                     <p className="rightColumnTextResumeInfo">University of Maryland, College Park</p>
                     <p className="rightColumnTextResumeInfo">Intended Graduation: December 2020</p>
                     <p className="rightColumnTextResumeInfo">B.S. Computer Science</p>

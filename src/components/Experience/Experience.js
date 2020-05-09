@@ -1,30 +1,56 @@
-import React from 'react';
+import React, { useEffect, useRef } from "react";
 import './Experience.css'
+import gsap from "gsap";
 import yasuoVideo from '../../assets/yasuo.mp4'
 const Experience = (props) => {
+    let videoYasuo = useRef(null)
     const returnHomeHandler = () => {
+        gsap.to([".Experience"], 0.4, { opacity: "0" }).eventCallback("onComplete", () => {
+            props.changePage("HomeReturn")
+        })
 
     }
+    useEffect(() => {
+        // Intro
+        videoYasuo.removeAttribute("controls");
+        videoYasuo.currentTime = 4.8;
+        videoYasuo.play()
+        gsap.to(".videoYasuo", 1.2, { width: "47.5vw", ease: "power1.inOut", delay: .5 })
+        gsap.to([".nameAbout", ".backToMain", ".jobTitleSWE"], 1, { opacity: 1, delay: .5 })
+        gsap.to([".windDesc", ".sideText"], 1, { opacity: .7, delay: .5 })
+        gsap.to(".bottomLine", 1.5, { width: "10vw", delay: 1 })
+    }, [])
     return (
         <div className="Experience">
+            <div></div>
             <h5 className="backToMain" onClick={returnHomeHandler}>Back to Main</h5>
-            <video controls loop muted className="videoYasuo">
-                <source src={yasuoVideo} type="video/mp4" />
-            </video>
-            <div className="experienceFlexContainer">
-                <div className="flexRowItem">
-                    <div className="flexIndivBox">
-                        <h1 style={{ margin: 0 }}>Experience</h1>
-                        <p>0x1</p>
-                        <svg className="lineUnderProjects">
-                            <line x1="0" y1="0" x2="35%" y2="0" />
-                        </svg>
-                    </div>
-                    <div className="flexIndivBox">
-                        <p>"Technical skill is mastery of complexity, while creativity is mastery of simplicity" - Christopher Zeeman</p>
-                    </div>
+            <svg className="bottomLine">
+                <line x1="0" y1="0" x2="100%" y2="0" />
+            </svg>
 
+            <div className="topDiv">
+                <video controls loop muted className="videoYasuo" ref={el => videoYasuo = el} >
+                    <source src={yasuoVideo} type="video/mp4" />
+                </video>
+                <p className="sideText">0x1</p>
+                <div className="flexContainerHeader">
+                    <div className="flexItem">
+                        <h1 className="nameAbout">Experience</h1>
+                        <p className="jobTitleSWE">SWE</p>
+
+                    </div>
+                    <div className="flexItem">
+                        <p className="windDesc">
+                            "Technical skill is mastery of complexity, while creativity is mastery of simplicity" - Christopher Zeeman
+                        </p>
+                    </div>
                 </div>
+            </div>
+
+
+
+
+            <div className="experienceFlexContainer">
                 <div className="flexRowItem">
                     <div className="flexIndivBox">
                         <h2 className="jobTitle">Software Development Engineer Intern</h2>
@@ -37,6 +63,23 @@ const Experience = (props) => {
                     <div className="flexIndivBox">
                         <ul className="expDescription">
                             <li>Placement in the Amazon Web Services Team. Current details of position still unknown.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div className="flexRowItem">
+                    <div className="flexIndivBox">
+                        <h2 className="jobTitle">Undergraduate Researcher</h2>
+                        <h3 className="company one">UMD</h3>
+                        <p className="jobDetails">
+                            Computer Vision <br />
+                            January 2020 - May 2020
+                        </p>
+                    </div>
+                    <div className="flexIndivBox">
+                        <ul className="expDescription">
+                            <li>Developed a driver drowsiness detection system with 2 other students that uses cameras to understand a user's state.</li>
+                            <li>Trained multiple convolutional neural networks to detect blinks, yawns, and the action a driver is performing such as reaching for the radio, texting or calling, and reaching to the back of the vehicle.</li>
+                            <li>Once completed, the results will be submitted to multiple computer vision conferences to see if our paper is accepted.</li>
                         </ul>
                     </div>
                 </div>
