@@ -1,68 +1,26 @@
 .Home {
-  background-color: #ffffff;
-  margin: 0;
-
-  visibility: hidden;
+  background-color: black;
+  color: white;
+  font-family: "Raleway", sans-serif;
 }
 
-.loadingScreen {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  /* bring your own prefixes */
+.projectWindNew {
+  position: absolute;
+  top: 49vh;
+  left: 50vw;
   transform: translate(-50%, -50%);
 }
-.box {
-  position: relative;
-  width: 15vh;
-  height: 15vh;
-  /* border: 4px solid black; */
-  /* overflow: hidden; */
-}
+
 .item-1 {
   width: 15vh;
   height: 15vh;
 }
 
-svg {
-  transform: translate(0, -100%);
-}
-
-.rect1,
-.rect2,
-.rect3,
-.rect4,
-.rect5,
-.rect6,
-.rect7,
-.rect8,
-.rect9,
-.rect10 {
-  fill: rgb(255, 255, 255);
-}
-
-.wind {
-  object-fit: contain;
-  filter: invert(1);
-  width: 15vh;
-  height: 15vh;
-}
-.projectWind,
-.loaded {
-  opacity: 0;
-}
-.projectWind {
-  position: absolute;
-  top: 48vh;
-  left: 50%;
-  margin-right: -50%;
-  color: white;
-  transform: translate(-50%, -50%);
-}
 .screen {
   width: 100vw;
   height: 100vh;
 }
+
 .video {
   position: relative;
   object-fit: cover;
@@ -70,9 +28,10 @@ svg {
   height: 100%;
 }
 /* Now on home page */
+
 .title {
   margin: 0;
-  color: black;
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 40vh;
   left: 35vw;
@@ -92,17 +51,22 @@ svg {
     font-size: 13vh;
   }
 }
+/*Not used*/
+.buttons {
+  cursor:crosshair;
+}
+
 .about {
   position: absolute;
   top: 5vh;
   right: 5vw;
 }
-.projects {
+.experience {
   position: absolute;
   bottom: 5vh;
   left: 5vw;
 }
-.experience {
+.projects {
   position: absolute;
   top: 5vh;
   left: 5vw;
@@ -112,6 +76,8 @@ svg {
   bottom: 5vh;
   right: 5vw;
 }
+
+/*software Engineer*/
 .centerName {
   writing-mode: vertical-rl;
   text-orientation: mixed;
@@ -119,6 +85,8 @@ svg {
   left: 17vw;
   top: 15vh;
   font-size: 2vw;
+  color: black;
+  opacity: 0.1;
 }
 
 .rightNumbers {
@@ -134,6 +102,7 @@ svg {
   height: 5vh;
   left: 60vw;
   top: 80vh;
+  transform: translate(0%, -100%);
 }
 .numberNextToCenterLine {
   position: absolute;
@@ -142,6 +111,15 @@ svg {
   font-size: 2.5vh;
 }
 .line {
-  stroke: rgb(0, 0, 0);
+  stroke: rgb(255, 255, 255);
   stroke-width: 2;
+}
+
+.overlayBlackMask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
 }

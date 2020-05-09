@@ -1,6 +1,7 @@
 .About {
   font-family: "Raleway", sans-serif;
-  background-color: rgb(24, 24, 24);
+  /*rgb(24, 24, 24);  */
+  background-color: rgb(0, 0, 0);
   color: white;
   z-index: -1;
   min-height: 100vh;
@@ -11,10 +12,11 @@
   top: 7.5vh;
   left: 26.25vw;
   z-index: 110;
+  opacity: 0;
 }
 
 .sideText {
-  opacity: 0.21;
+  opacity: 0;
   position: absolute;
   transform: rotate(-90deg);
   transform-origin: top left;
@@ -24,11 +26,12 @@
 }
 
 .centerImage {
+  /* opacity: 0; */
   position: absolute;
   object-fit: cover;
   top: 20vh;
   left: 27.5vw;
-  width: 45vw;
+  width: 0vw;
   height: 55vh;
 }
 .topDiv {
@@ -66,6 +69,7 @@
     font-size: 2.9rem;
     width: 20vw;
     margin: 0;
+    opacity: 0;
   }
   .windDesc {
     width: 20vw;
@@ -73,6 +77,7 @@
   }
   .jobTitleSWE {
     font-size: 1.2vh;
+    opacity: 0;
   }
   .flexContainerBody {
     display: flex;
@@ -84,8 +89,21 @@
   }
   .descUnderPfp {
     max-width: 20vw;
-    font-size: 1rem;
+    font-size: 0.9rem;
+    padding-bottom: 2vh;
   }
+}
+.vision {
+  margin-top: 7vh;
+  margin-bottom: 2%;
+}
+.hTags {
+  margin-top: 0vh;
+  margin-bottom: 1%;
+}
+.hTagsPadded {
+  margin-top: 4vh;
+  margin-bottom: 1%;
 }
 
 @media (max-width: 999px) {
@@ -98,12 +116,14 @@
   }
   .backToMain {
     left: 2vw;
+    opacity: 0;
   }
   .flexContainerHeader {
     padding-top: 0;
   }
-  .face {
-    padding-top: 20vh;
+
+  .sideText {
+    visibility: hidden;
   }
 }
 
@@ -111,7 +131,7 @@
   position: absolute;
   top: 96vh;
   left: 26vw;
-  width: 10vw;
+  width: 0vw;
   height: 2vh;
   stroke: rgb(255, 255, 255);
   stroke-width: 2;
@@ -122,7 +142,7 @@
   margin: 0;
 }
 .windDesc {
-  opacity: 0.21;
+  opacity: 0;
   font-size: 0.7rem;
   z-index: 110;
 }
@@ -131,13 +151,10 @@
 }
 
 .flexContainerBody {
-  font-size: 1rem;
+  font-size: 0.9rem;
   z-index: 10;
   background-color: white;
   margin-top: 0;
-}
-
-.flexContainerBody {
   padding-top: 37.5vh;
   padding-bottom: 10%;
 }
@@ -164,16 +181,13 @@ p {
   justify-content: space-between;
   flex-wrap: wrap;
   text-align: center;
+  padding-bottom: 10vh;
 }
 
 .skillIcons {
   opacity: 0;
   width: 3vh;
   height: 3vh;
-}
-
-.descUnderPfp {
-  margin-top: 7vh;
 }
 
 .skillsTitle {

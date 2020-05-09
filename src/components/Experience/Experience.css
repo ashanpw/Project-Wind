@@ -1,0 +1,53 @@
+.Experience {
+  color: white;
+  background-color: black;
+}
+
+.videoYasuo {
+  width: 60vw;
+  display: flex;
+  padding-top: 15vh;
+  margin: auto;
+  opacity: 0.75;
+}
+.lineUnderProjects {
+  stroke: rgb(255, 255, 255);
+  stroke-width: 2;
+}
+.expDescription {
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.jobTitle {
+  margin: 0;
+}
+.company {
+  margin-top: 0;
+  margin-bottom: 0vh;
+}
+
+.jobDetails {
+  font-size: 0.8rem;
+  margin: 0;
+  color: rgb(214, 214, 214);
+}
+@media (min-width: 1000px) {
+  .experienceFlexContainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 60vw;
+    margin: auto;
+    padding-top: 5vh;
+    justify-content: space-between;
+  }
+  .flexRowItem {
+    display: flex;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+  }
+
+  .flexIndivBox {
+    width: 60vw;
+  }
+}
