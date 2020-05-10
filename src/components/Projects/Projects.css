@@ -1,0 +1,165 @@
+.Projects {
+  padding-top: 5vh;
+  width: 98vw;
+  color: white;
+  justify-content: center;
+}
+.returnHomeProjects {
+  cursor: url("../../assets/circleHover.png"), pointer;
+  margin: 0;
+  padding-left: 2.5vw;
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+  opacity: 0;
+  position: absolute;
+  top: 2vh;
+  left: 0;
+}
+.Projects li {
+  margin-top: 1%;
+}
+@media (max-width: 999px) {
+  .Projects {
+    width: 98vw;
+    justify-content: center;
+  }
+  .flexGridItemVertical,
+  .flexGridItemHorizontal {
+    padding: 2vh;
+  }
+  .quarantineVideo {
+    height: 30vh;
+    border-radius: 25px;
+  }
+  video,
+  img {
+    border-radius: 12px;
+    width: 100%;
+  }
+}
+@media (min-width: 1000px) {
+  .flexGrid {
+    min-height: 90vh;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .flexGridItemVertical {
+    padding-right: 5vh;
+    margin-top: 10vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .flexGridItemHorizontal {
+    padding-left: 5vh;
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+  }
+  .flexGridDesc {
+    display: flex;
+    flex-direction: column;
+  }
+  .liText {
+    font-size: 0.9rem;
+  }
+  .quarantineText {
+    opacity: 0;
+    padding-left: 5%;
+    max-width: 20vw;
+  }
+  .studyBubbleText {
+    opacity: 0;
+    max-width: 42vw;
+  }
+  .pedestrianText {
+    opacity: 0;
+    padding-top: 5vh;
+    max-width: 33vw;
+    padding-right: 5%;
+  }
+  .seamCarvingText {
+    opacity: 0;
+    padding-top: 6vh;
+    padding-left: 3%;
+    max-width: 40vw;
+  }
+
+  .drowsinessText {
+    opacity: 0;
+    max-width: 40vw;
+    padding-right: 2%;
+    /* padding-top: 12vh; */
+  }
+  .imageStitchingText {
+    opacity: 0;
+    max-width: 50vw;
+    padding-right: 2%;
+    padding-top: 12vh;
+  }
+  .bambooText {
+    font-size: 2rem;
+    max-width: 27vw;
+    padding-right: 5vw;
+    padding-top: 5vh;
+  }
+  .quarantineVideo {
+    opacity: 0;
+    width: 15.4vw;
+    height: auto;
+    border-radius: 25px;
+  }
+  .studyBubble {
+    opacity: 0;
+    width: 46vw;
+    height: auto;
+    border-radius: 6px;
+  }
+  .pedestrianDetection {
+    opacity: 0;
+    width: 33vw;
+    margin-top: 5vh;
+    object-fit: cover;
+    height: 45vh;
+    border-radius: 16px;
+    margin-right: 5%;
+  }
+  .seamCarving {
+    width: 49vw;
+    height: 33vw;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+
+  .drowsinessVideo {
+    justify-content: left;
+    object-fit: cover;
+    width: 43vw;
+    height: 33vw;
+    border-radius: 6px;
+  }
+  .imageStitching {
+    width: 45vw;
+    border-radius: 6px;
+  }
+  .flexDrowsiness {
+    padding-left: 2vw;
+    padding-right: 10%;
+  }
+
+  .imageStitchingContainer {
+    margin-top: 20vh;
+    margin-right: 5vw;
+  }
+  .depthContainer {
+    margin-top: 18vh;
+  }
+  .pedestrianContainer {
+    margin-top: 23vh;
+  }
+}
+.depthContainer {
+  margin-bottom: 10vh;
+}

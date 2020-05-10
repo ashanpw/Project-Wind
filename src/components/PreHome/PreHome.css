@@ -1,85 +1,85 @@
 .PreHome {
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  color: white;
-  font-family: "Raleway", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: "Raleway", sans-serif;
 }
 
 .lineInstructions {
-  position: absolute;
-  left: 30vw;
-  top: 35vh;
+    position: absolute;
+    left: 30vw;
+    top: 35vh;
 }
 
 .sideLine {
-  stroke-width: 2;
+    stroke-width: 2;
 }
 
 .name {
-  position: absolute;
-  left: 60vw;
-  top: 20vh;
+    position: absolute;
+    left: 60vw;
+    top: 20vh;
 }
 .instructions {
-  position: absolute;
-  left: 60vw;
-  bottom: 20vh;
+    position: absolute;
+    left: 60vw;
+    bottom: 20vh;
 }
 
 .imageContainer {
-  position: absolute;
-  width: 15vh;
-  height: 15vh;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    width: 15vh;
+    height: 15vh;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
 }
 
 .icon {
-  opacity: 0;
-  object-fit: contain;
-  width: 100%;
-  height: 100%;
-  filter: invert(1);
+    cursor: url("../../assets/circleHover.png"), pointer;
+    opacity: 0;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    filter: invert(1);
 }
 
 .projectWind {
-  visibility: hidden;
-  position: absolute;
-  top: 49vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+    visibility: hidden;
+    position: absolute;
+    top: 51vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
 }
-/* .svgLine {
-  transform: translate(0, -100%);
-} */
+
+.projectWindJapanese {
+    visibility: hidden;
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+}
+
+.projectWindJapanese {
+    color: black;
+}
 /* Loading Screen */
-.rect1,
-.rect2,
-.rect3,
-.rect4,
-.rect5,
-.rect6,
-.rect7,
-.rect8,
-.rect9,
-.rect10 {
-  fill: rgb(255, 255, 255);
-}
 
 .projectWind,
-.loaded {
-  opacity: 0;
+.loaded,
+.instructions,
+.name {
+    opacity: 0;
 }
 .box {
-  position: absolute;
-  width: 15vh;
-  height: 15vh;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    width: 15vh;
+    height: 15vh;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
 
-  /* border: 4px solid black; */
-  /* overflow: hidden; */
+    /* border: 4px solid black; */
+    /* overflow: hidden; */
 }

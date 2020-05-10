@@ -2,4 +2,13 @@
   margin: 0;
   font-family: "Raleway", sans-serif;
   background-color: black;
+  cursor: url("../assets/circle.png"), pointer;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+html {
+  -ms-overflow-style: none;
 }

@@ -1,7 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import './Experience.css'
 import gsap from "gsap";
-import yasuoVideo from '../../assets/yasuo.mp4'
+import yasuoVideoMp4 from '../../assets/yasuo.mp4';
+import yasuoVideoWeb from '../../assets/yasuo.webm';
+import yasuoVideoPoster from '../../assets/yasuoPoster.png';
+
 const Experience = (props) => {
     let videoYasuo = useRef(null)
     const returnHomeHandler = () => {
@@ -13,34 +16,35 @@ const Experience = (props) => {
     useEffect(() => {
         // Intro
         videoYasuo.removeAttribute("controls");
-        videoYasuo.currentTime = 4.8;
+        // videoYasuo.currentTime = 4.8;
         videoYasuo.play()
         gsap.to(".videoYasuo", 1.2, { width: "47.5vw", ease: "power1.inOut", delay: .5 })
         gsap.to([".nameAbout", ".backToMain", ".jobTitleSWE"], 1, { opacity: 1, delay: .5 })
-        gsap.to([".windDesc", ".sideText"], 1, { opacity: .7, delay: .5 })
+        gsap.to(".sideText", 1, { opacity: .7, delay: .5 })
+        gsap.to(".windDesc", 1, { opacity: .95, delay: .5 })
         gsap.to(".bottomLine", 1.5, { width: "10vw", delay: 1 })
     }, [])
     return (
         <div className="Experience">
-            <div></div>
             <h5 className="backToMain" onClick={returnHomeHandler}>Back to Main</h5>
             <svg className="bottomLine">
                 <line x1="0" y1="0" x2="100%" y2="0" />
             </svg>
 
             <div className="topDiv">
-                <video controls loop muted className="videoYasuo" ref={el => videoYasuo = el} >
-                    <source src={yasuoVideo} type="video/mp4" />
+                <video controls loop muted className="videoYasuo" ref={el => videoYasuo = el} poster={yasuoVideoPoster}>
+                    <source src={yasuoVideoWeb} type="video/webm" />
+                    <source src={yasuoVideoMp4} type="video/mp4" />
                 </video>
                 <p className="sideText">0x1</p>
                 <div className="flexContainerHeader">
                     <div className="flexItem">
                         <h1 className="nameAbout">Experience</h1>
-                        <p className="jobTitleSWE">SWE</p>
+                        <p className="jobTitleSWE">Scroll to view</p>
 
                     </div>
                     <div className="flexItem">
-                        <p className="windDesc">
+                        <p className="windDesc changeColor">
                             "Technical skill is mastery of complexity, while creativity is mastery of simplicity" - Christopher Zeeman
                         </p>
                     </div>

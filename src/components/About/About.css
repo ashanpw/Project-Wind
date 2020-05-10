@@ -1,197 +1,204 @@
 .About {
-  font-family: "Raleway", sans-serif;
-  /*rgb(24, 24, 24);  */
-  background-color: rgb(0, 0, 0);
-  color: white;
-  z-index: -1;
-  min-height: 100vh;
+    font-family: "Raleway", sans-serif;
+    /*rgb(24, 24, 24);  */
+    background-color: rgb(0, 0, 0);
+    color: white;
+    z-index: -1;
+    min-height: 100vh;
 }
 
 .backToMain {
-  position: absolute;
-  top: 7.5vh;
-  left: 26.25vw;
-  z-index: 110;
-  opacity: 0;
+    position: absolute;
+    margin: 0;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    padding-left: 2.5vw;
+    padding-right: 2.5vw;
+    top: 7.5vh;
+    left: 23.75vw;
+    z-index: 110;
+    opacity: 0;
+    cursor: url("../../assets/circleHover.png"), pointer;
 }
 
 .sideText {
-  opacity: 0;
-  position: absolute;
-  transform: rotate(-90deg);
-  transform-origin: top left;
-  left: 23.5vw;
-  top: 75vh;
-  z-index: 110;
+    opacity: 0;
+    position: absolute;
+    transform: rotate(-90deg);
+    transform-origin: top left;
+    left: 23.5vw;
+    top: 75vh;
+    z-index: 110;
 }
 
 .centerImage {
-  /* opacity: 0; */
-  position: absolute;
-  object-fit: cover;
-  top: 20vh;
-  left: 26.25vw;
-  width: 0vw;
-  height: 55vh;
+    /* opacity: 0; */
+    position: absolute;
+    object-fit: cover;
+    top: 20vh;
+    left: 26.25vw;
+    width: 0vw;
+    height: 55vh;
 }
 .topDiv {
-  height: 100vh;
-  background-color: black;
-  margin: auto;
+    height: 100vh;
+    background-color: black;
+    margin: auto;
 }
 
 .flexContainerHeader {
-  font-size: 1rem;
-  z-index: 10;
-  margin-top: 0;
+    font-size: 1rem;
+    z-index: 10;
+    margin-top: 0;
 }
 .flexContainerHeader {
-  position: absolute;
-  top: 82.5vh;
-  display: flex;
-  margin: auto;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 60vw;
+    position: absolute;
+    top: 82.5vh;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60vw;
 }
 /* Everything for second part of page except flexContainerHeader */
 @media (min-width: 1000px) {
-  .topDiv {
-    max-width: 60vw;
-  }
-  .flexItemLeft {
-    width: 20vw;
-  }
-  .flexItemRight {
-    width: 20vw;
-  }
-  .nameAbout {
-    font-size: 2.9rem;
-    width: 20vw;
-    margin: 0;
-    opacity: 0;
-  }
-  .windDesc {
-    width: 20vw;
-    z-index: 110;
-  }
-  .jobTitleSWE {
-    font-size: 1.2vh;
-    opacity: 0;
-  }
-  .flexContainerBody {
-    display: flex;
-    width: 60vw;
-    min-height: 80vh;
-    margin: auto;
-    justify-content: space-evenly;
-    align-items: flex-start;
-  }
-  .descUnderPfp {
-    max-width: 20vw;
-    font-size: 0.9rem;
-    padding-bottom: 2vh;
-  }
+    .topDiv {
+        max-width: 60vw;
+    }
+    .flexItemLeft {
+        width: 20vw;
+    }
+    .flexItemRight {
+        width: 20vw;
+    }
+    .nameAbout {
+        font-size: 2.9rem;
+        width: 20vw;
+        margin: 0;
+        opacity: 0;
+    }
+    .windDesc {
+        width: 20vw;
+        z-index: 110;
+    }
+    .jobTitleSWE {
+        font-size: 1.2vh;
+        opacity: 0;
+    }
+    .flexContainerBody {
+        display: flex;
+        width: 60vw;
+        min-height: 80vh;
+        margin: auto;
+        justify-content: space-evenly;
+        align-items: flex-start;
+    }
+    .descUnderPfp {
+        max-width: 20vw;
+        font-size: 0.8rem;
+        padding-bottom: 2vh;
+    }
 }
 .vision {
-  margin-top: 7vh;
-  margin-bottom: 2%;
+    margin-top: 7vh;
+    margin-bottom: 1rem;
 }
 .hTags {
-  margin-top: 0vh;
-  margin-bottom: 1%;
+    margin-top: 0vh;
+    margin-bottom: 1rem;
 }
 .hTagsPadded {
-  margin-top: 4vh;
-  margin-bottom: 1%;
+    margin-top: 4vh;
+    margin-bottom: 1%;
 }
 
 @media (max-width: 999px) {
-  .windDesc {
-    visibility: hidden;
-  }
-  .flexContainerHeader,
-  .flexContainerBody {
-    padding: 10%;
-  }
-  .backToMain {
-    left: 2vw;
-    opacity: 0;
-  }
-  .flexContainerHeader {
-    padding-top: 0;
-  }
+    .windDesc {
+        visibility: hidden;
+    }
+    .flexContainerHeader,
+    .flexContainerBody {
+        padding: 10%;
+    }
+    .backToMain {
+        left: 2vw;
+        opacity: 0;
+    }
+    .flexContainerHeader {
+        padding-top: 0;
+    }
 
-  .sideText {
-    visibility: hidden;
-  }
+    .sideText {
+        visibility: hidden;
+    }
 }
 
 .bottomLine {
-  position: absolute;
-  top: 96vh;
-  left: 26vw;
-  width: 0vw;
-  height: 2vh;
-  stroke: rgb(255, 255, 255);
-  stroke-width: 2;
-  z-index: 100;
+    position: absolute;
+    top: 96vh;
+    left: 26vw;
+    width: 0vw;
+    height: 2vh;
+    stroke: rgb(255, 255, 255);
+    stroke-width: 2;
+    z-index: 100;
 }
 
 .nameAbout {
-  margin: 0;
+    margin: 0;
 }
 .windDesc {
-  opacity: 0;
-  font-size: 0.7rem;
-  z-index: 110;
+    opacity: 0;
+    font-size: 0.8rem;
+    z-index: 110;
 }
 .jobTitleSWE {
-  margin-top: 0.5em;
+    margin-top: 0.5em;
 }
 
 .flexContainerBody {
-  font-size: 0.9rem;
-  z-index: 10;
-  background-color: white;
-  margin-top: 0;
-  padding-top: 37.5vh;
-  padding-bottom: 10%;
+    font-size: 0.8rem;
+    z-index: 10;
+    background-color: white;
+    margin-top: 0;
+    padding-top: 37.5vh;
+    padding-bottom: 10%;
 }
 
 .face {
-  width: 52%;
-  height: auto;
+    opacity: 0;
+    width: 52%;
+    height: auto;
 }
 
 .rightColumnText {
-  margin: 0;
+    margin: 0;
 }
 
 p {
-  margin: 0;
+    margin: 0;
 }
 .rightColumnTextResumeInfo {
-  font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .skillsFlexContainer {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  text-align: center;
-  padding-bottom: 10vh;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-bottom: 10vh;
 }
 
 .skillIcons {
-  opacity: 0;
-  width: 3vh;
-  height: 3vh;
+    opacity: 0;
+    width: 3vh;
+    height: 3vh;
 }
 
 .skillsTitle {
-  padding-top: 10%;
-  text-align: center;
-  margin-bottom: 5%;
+    padding-top: 10%;
+    text-align: center;
+    margin-bottom: 5%;
 }

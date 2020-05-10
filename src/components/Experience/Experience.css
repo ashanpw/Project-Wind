@@ -18,8 +18,14 @@
   stroke-width: 2;
 }
 .expDescription {
-  font-size: 0.9rem;
+  font-size: 0.83rem;
   margin: 0;
+}
+.expDescription li {
+  margin-bottom: 0.83rem;
+}
+.changeColor {
+  color: rgb(0, 193, 255);
 }
 
 .jobTitle {
@@ -33,7 +39,7 @@
 .jobDetails {
   font-size: 0.8rem;
   margin: 0;
-  color: rgb(214, 214, 214);
+  color: rgb(233, 171, 0);
 }
 @media (max-width: 999px) {
   .nameAbout {

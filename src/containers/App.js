@@ -5,27 +5,40 @@ import Home from '../components/Home/Home';
 import About from '../components/About/About';
 import Projects from '../components/Projects/Projects';
 import Experience from '../components/Experience/Experience';
+import Contact from '../components/Contact/Contact';
+
 
 class App extends Component {
   state = {
-    page: "Experience",
+    page: "PreHome",
   }
   updatePageHandler = (page) => {
     this.setState({ page: page });
     console.log(this.state)
   }
+
   render() {
-    let display = this.state.page === "PreHome" ?
-      <PreHome changePage={this.updatePageHandler} /> : this.state.page === "Home" ?
-        <Home changePage={this.updatePageHandler} isReturning={false} /> : this.state.page === "HomeReturn" ?
-          <Home changePage={this.updatePageHandler} isReturning={true} /> : this.state.page === "About" ?
-            <About changePage={this.updatePageHandler} /> : this.state.page === "Experience" ? <Experience changePage={this.updatePageHandler} /> :
-              <Projects changePage={this.updatePageHandler} />
-    // let display = this.state.page === "About" ? <About changePage={this.updatePageHandler} /> : <Home changePage={this.updatePageHandler} />
+
+    let display;
+    if (this.state.page === "PreHome")
+      display = (<PreHome changePage={this.updatePageHandler} />)
+    else if (this.state.page === "Home")
+      display = <Home changePage={this.updatePageHandler} isReturning={false} />
+    else if (this.state.page === "HomeReturn")
+      display = <Home changePage={this.updatePageHandler} isReturning={true} />
+    else if (this.state.page === "About")
+      display = <About changePage={this.updatePageHandler} />
+    else if (this.state.page === "Experience")
+      display = <Experience changePage={this.updatePageHandler} />
+    else if (this.state.page === "Contact")
+      display = <Contact changePage={this.updatePageHandler} />
+    else
+      display = <Projects changePage={this.updatePageHandler} />
+
     return (
       <div className="App">
         {display}
-      </div>
+      </div >
     );
   }
 }
